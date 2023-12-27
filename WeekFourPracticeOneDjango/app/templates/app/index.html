@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} app page {% endblock title %}
+{% load crispy_forms_tags %}
+{% block content %} 
+
+{% comment %} <h1>Welcome to our App custom page</h1> {% endcomment %}
+<form action="" method="post" style='width:50%;margin:auto' enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{data | crispy}}
+        <button class='btn btn-info' type="submit">Submit</button>
+
+</form>
+
+{% endblock content %} 
+
+

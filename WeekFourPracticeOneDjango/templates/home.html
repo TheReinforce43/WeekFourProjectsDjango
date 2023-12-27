@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block title %}Public
+Practice page{% endblock title %} {% block content %}
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for key in data %}
+
+  <div class="col">
+    <div class="card">
+      <img id='ProfilePicture' src="{{key.OfficialPicture}}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Name : {{key.Name}}</h5>
+        <h5 class="card-title">Email :{{key.Email}}</h5>
+        <h5 class="card-title">Education Level : {{key.EducationLevel}}</h5>
+        <h5 class="card-title">Enrollment Date : {{key.EnrollmentDate}}</h5>
+       
+      
+       
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+{% endblock content %}
